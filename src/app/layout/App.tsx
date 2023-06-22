@@ -3,6 +3,7 @@ import { Container, CssBaseline, createTheme } from "@mui/material";
 import { Header } from "./Header";
 import { ThemeProvider } from "@emotion/react";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 // const products = [
 //   { name: 'product1', price: 100.00 },
@@ -29,7 +30,7 @@ function App() {
       <CssBaseline />
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container>
-        <Catalog />
+        <Outlet />
       </Container>
     </ThemeProvider>
   );
